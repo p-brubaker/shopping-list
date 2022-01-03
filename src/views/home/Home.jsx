@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import AddItem from '../../components/add-item/AddItem';
 import List from '../../components/list/List';
 
-const items = [
+const initial = [
   { id: 0, name: 'Parsley' },
   { id: 1, name: 'Sage' },
   { id: 2, name: 'Rosemary' },
@@ -33,7 +33,7 @@ function itemsReducer(items, action) {
 }
 
 export default function Home() {
-  const [items, dispatch] = useReducer(itemsReducer, items);
+  const [items, dispatch] = useReducer(itemsReducer, initial);
 
   const handleAddItem = (name) => {
     dispatch({
@@ -42,10 +42,10 @@ export default function Home() {
     });
   };
 
-  const handleEditItem = (name) => {
+  const handleEditItem = (item) => {
     dispatch({
       type: 'edit',
-      name,
+      item,
     });
   };
 
