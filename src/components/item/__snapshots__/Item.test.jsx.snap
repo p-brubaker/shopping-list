@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the addItem component 1`] = `
+<div>
+  <div>
+    <p>
+      barley
+    </p>
+    <button>
+      Edit
+    </button>
+    <button>
+      Delete
+    </button>
+  </div>
+</div>
+`;
